@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mission Licht – ein Astronaut aus Gemüse für Alina</title>
+<meta name="description" content="Wie aus Hokkaido, Blumenkohl und Pastinaken ein leuchtender Astronaut wurde: ein Geburtstagsgeschenk für Alina, mit Ausmalbildern, Rezept und einer Saunanacht.">
+<meta property="og:title" content="Mission Licht – ein Astronaut aus Gemüse">
+<meta property="og:description" content="Ein Geburtstagsgeschenk über das Licht in uns und den Anzug, den wir auf der Erde tragen.">
+<meta property="og:image" content="bilder/astronaut-fertig.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nacht:#141b3d;
+  --nacht-tief:#0c1129;
+  --kopf:#7fb2ff;
+  --herz:#f5b83d;
+  --hokkaido:#e8642c;
+  --tinte:#1c1c22;
+  --papier:#ffffff;
+  --grau:#5b5e6b;
+  --skizze:255px 18px 225px 18px / 18px 225px 18px 255px;
+  --mass:42rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papier);color:var(--tinte);font-family:'Literata',Georgia,serif;font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:'Fredoka',system-ui,sans-serif;font-weight:600;line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1.25rem}
+h3{font-size:1.35rem;margin-bottom:.5rem}
+p{margin:0 0 1.1rem}
+a{color:inherit;text-decoration-thickness:2px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,.zoom:focus-visible{outline:3px solid var(--kopf);outline-offset:4px;border-radius:6px}
+.wrap{width:min(100% - 2rem, 72rem);margin-inline:auto}
+.text{max-width:var(--mass)}
+section{padding:clamp(4rem,9vw,7rem) 0}
+
+/* ---------- Hero: Nacht ---------- */
+.hero{background:radial-gradient(ellipse at 70% 30%, #23306a 0%, var(--nacht) 45%, var(--nacht-tief) 100%);color:#fff;position:relative;overflow:hidden;padding:clamp(3rem,7vw,6rem) 0 clamp(4rem,8vw,7rem)}
+.sterne{position:absolute;inset:0;pointer-events:none;opacity:.9}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.hero h1{font-size:clamp(3.4rem,9vw,7.5rem);letter-spacing:-.02em;font-weight:600}
+.hero h1 .zeile{display:block}
+.hero h1 .licht{color:var(--herz);text-shadow:0 0 28px rgba(245,184,61,.55)}
+.hero .unter{font-family:'Fredoka',sans-serif;font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:400;margin:1.25rem 0 1.75rem;max-width:30rem;color:#dfe6ff}
+.hero .lead{max-width:32rem;color:#c3cbe8;font-size:1.05rem}
+.hero .datum{display:inline-block;margin-top:.5rem;font-family:'Fredoka',sans-serif;font-size:1rem;color:var(--nacht);background:var(--herz);padding:.35rem .9rem;border-radius:999px}
+.bullauge{position:relative;justify-self:center;width:min(100%,30rem);aspect-ratio:3/4}
+.bullauge img{width:100%;height:100%;object-fit:cover;border-radius:46% 46% 40% 40% / 38% 38% 30% 30%;border:6px solid #2c3a78;box-shadow:0 0 0 2px #4a5aa8, 0 30px 80px -20px rgba(0,0,0,.6)}
+.bullauge .glimmen{position:absolute;left:53%;top:42%;width:34%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle, rgba(245,184,61,.55) 0%, rgba(245,184,61,0) 70%);mix-blend-mode:screen;animation:atmen 4.5s ease-in-out infinite}
+@keyframes atmen{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(.92)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}}
+.hero-fuss{position:relative;margin-top:clamp(2.5rem,5vw,4rem);display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;font-family:'Fredoka',sans-serif;color:#aab4dc}
+.hero-fuss a{color:#fff;text-decoration:none;border-bottom:2px solid rgba(127,178,255,.6)}
+.hero-fuss a:hover{border-color:var(--herz)}
+
+/* ---------- Geschichte ---------- */
+.geschichte{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,22rem);gap:clamp(2rem,6vw,6rem);align-items:start}
+.zitat{font-family:'Fredoka',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.3;font-weight:500;margin:2rem 0;padding-left:1.25rem;border-left:6px solid var(--herz)}
+.zwei-lichter{display:grid;gap:1rem;margin-top:.5rem}
+.licht-karte{padding:1.25rem 1.4rem;border:3px solid var(--tinte);border-radius:var(--skizze)}
+.licht-karte h3{display:flex;align-items:center;gap:.6rem}
+.punkt{width:1.1rem;height:1.1rem;border-radius:50%;flex:none}
+.punkt.blau{background:var(--kopf);box-shadow:0 0 14px var(--kopf)}
+.punkt.gold{background:var(--herz);box-shadow:0 0 14px var(--herz)}
+.licht-karte p{margin:0;font-size:1rem}
+
+/* ---------- Anatomie ---------- */
+.anatomie{background:#f3f6ff}
+.anatomie-grid{display:grid;grid-template-columns:minmax(0,26rem) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.markiert{position:relative}
+.markiert img{border-radius:22px}
+.marke{position:absolute;transform:translate(-50%,-50%);width:2.1rem;height:2.1rem;border-radius:50%;background:#fff;border:3px solid var(--tinte);font-family:'Fredoka',sans-serif;font-weight:600;display:grid;place-items:center;font-size:1rem;box-shadow:0 2px 0 var(--tinte)}
+.legende{list-style:none;margin:0;padding:0;display:grid;gap:1.1rem}
+.legende li{display:grid;grid-template-columns:2.1rem 1fr;gap:1rem;align-items:start}
+.legende .nr{width:2.1rem;height:2.1rem;border-radius:50%;border:3px solid var(--tinte);display:grid;place-items:center;font-family:'Fredoka',sans-serif;font-weight:600}
+.legende strong{font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.15rem;display:block}
+.legende span{color:var(--grau);font-size:.98rem}
+
+/* ---------- Vision vs Wirklichkeit ---------- */
+.vergleich{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,3vw,2.5rem);margin-top:2.5rem}
+figure{margin:0}
+figcaption{font-size:.95rem;color:var(--grau);margin-top:.7rem;line-height:1.5}
+figcaption b{font-family:'Fredoka',sans-serif;font-weight:600;color:var(--tinte);font-size:1.05rem;display:block}
+.vergleich img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:18px}
+.zoom{cursor:zoom-in;padding:0;border:0;background:none;display:block;width:100%;text-align:left}
+
+/* ---------- Bau: Zeitleiste ---------- */
+.zeitleiste{list-style:none;margin:3rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem);counter-reset:schritt}
+.zeitleiste li{counter-increment:schritt;position:relative}
+.zeitleiste img{aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:16px}
+.zeitleiste .schritt{font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.05rem;display:flex;gap:.5rem;align-items:center;margin:.9rem 0 .3rem}
+.zeitleiste .schritt::before{content:counter(schritt);width:1.9rem;height:1.9rem;border-radius:50%;background:var(--hokkaido);color:#fff;display:grid;place-items:center;font-size:.95rem;flex:none}
+.zeitleiste p{font-size:.95rem;color:var(--grau);line-height:1.55;margin:0}
+.werkzeug{margin-top:2.5rem;font-family:'Fredoka',sans-serif;font-size:1.2rem}
+
+/* ---------- Ausmalbilder ---------- */
+.ausmalen{background:var(--papier)}
+.blatt-reihe{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(1.5rem,4vw,3rem);margin-top:2.5rem;align-items:start}
+.blatt{border:3px solid var(--tinte);border-radius:var(--skizze);padding:clamp(.8rem,2vw,1.4rem);background:#fff}
+.blatt img{width:100%;border-radius:4px}
+.blatt-stapel{display:grid;gap:clamp(1.5rem,4vw,3rem)}
+.lade{display:inline-flex;align-items:center;gap:.5rem;margin-top:.9rem;font-family:'Fredoka',sans-serif;font-weight:500;font-size:1rem;color:var(--tinte);text-decoration:none;padding:.55rem 1.1rem;border:2.5px solid var(--tinte);border-radius:999px;background:#fff;transition:background .15s}
+.lade:hover{background:var(--herz)}
+.lade svg{width:1.1rem;height:1.1rem}
+.versuch{display:grid;grid-template-columns:7rem 1fr;gap:1.2rem;align-items:center;margin-top:2.5rem;padding:1.2rem;background:#f6f6f8;border-radius:16px}
+.versuch img{border-radius:8px}
+.versuch p{margin:0;font-size:.98rem}
+
+/* ---------- Rezept ---------- */
+.rezept{background:linear-gradient(180deg,#fff7e6 0%,#fff 100%)}
+.rezept-grid{display:grid;grid-template-columns:minmax(0,20rem) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);margin-top:2rem}
+.zutaten{list-style:none;padding:0;margin:0}
+.zutaten li{padding:.55rem 0;border-bottom:2px dotted #e2c98f;font-size:1rem;line-height:1.45}
+.zutaten li em{font-style:normal;font-family:'Fredoka',sans-serif;font-weight:500;color:var(--hokkaido)}
+.schritte{margin:0;padding:0;list-style:none;counter-reset:s}
+.schritte li{counter-increment:s;display:grid;grid-template-columns:2.4rem 1fr;gap:1rem;margin-bottom:1.3rem}
+.schritte li::before{content:counter(s);width:2.4rem;height:2.4rem;border-radius:50%;border:3px solid var(--tinte);display:grid;place-items:center;font-family:'Fredoka',sans-serif;font-weight:600;background:#fff}
+.schritte li p{margin:.3rem 0 0}
+.portion{font-family:'Fredoka',sans-serif;color:var(--grau);margin-bottom:1rem}
+
+/* ---------- Mission im Kopf ---------- */
+.mission{background:var(--nacht);color:#fff;position:relative;overflow:hidden}
+.mission-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.mission p{color:#c9d1ee}
+.gutschein{background:#fff;border-radius:14px;padding:.7rem;transform:rotate(-2deg);box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.eckdaten{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.2rem;margin:1.5rem 0;font-size:1rem}
+.eckdaten dt{font-family:'Fredoka',sans-serif;color:var(--kopf)}
+.eckdaten dd{margin:0;color:#fff}
+.mission .lade{background:transparent;color:#fff;border-color:#fff}
+.mission .lade:hover{background:var(--kopf);color:var(--nacht);border-color:var(--kopf)}
+
+/* ---------- Übergabe & Kerze ---------- */
+.uebergabe{background:#fff}
+.kerzen-buehne{margin-top:2.5rem;border-radius:28px;background:#2a2a3a;color:#fff;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:2rem;padding:clamp(1.5rem,4vw,3rem);transition:background 1.2s ease;position:relative;overflow:hidden}
+.kerzen-buehne.aus{background:#07091a}
+.buehne-bild{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:1.5rem;min-height:300px}
+.mini-astro{width:170px;height:auto}
+.mini-astro .herzlicht{transition:opacity 1s, filter 1s}
+.mini-astro .aura{opacity:.25;transition:opacity 1.4s ease}
+.kerzen-buehne.aus .mini-astro .aura{opacity:1}
+.kerzen-buehne.aus .mini-astro .herzlicht{filter:drop-shadow(0 0 10px #f5b83d)}
+.kerzen-buehne.aus .mini-astro .kopflicht{filter:drop-shadow(0 0 18px #7fb2ff)}
+.kerze{width:90px;height:auto;cursor:pointer;background:none;border:0;padding:0}
+.flamme{transform-origin:50% 100%;transform-box:fill-box;animation:flackern 1.6s ease-in-out infinite;transition:transform .5s ease, opacity .5s ease}
+@keyframes flackern{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.07,.95) rotate(2deg)}}
+.kerzen-buehne.aus .flamme{animation:none;transform:scale(0);opacity:0}
+.rauch{opacity:0}
+.kerzen-buehne.aus .rauch{animation:rauch 2.2s ease-out forwards}
+@keyframes rauch{0%{opacity:.8;transform:translateY(0)}100%{opacity:0;transform:translateY(-40px)}}
+.buehne-text h3{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:1rem}
+.botschaft{font-family:'Fredoka',sans-serif;font-size:clamp(1.3rem,2.6vw,1.8rem);color:var(--herz);min-height:2.6em;margin:1rem 0 1.4rem;opacity:0;transition:opacity 1s .4s}
+.kerzen-buehne.aus .botschaft{opacity:1}
+.knopf{font-family:'Fredoka',sans-serif;font-weight:500;font-size:1.05rem;padding:.75rem 1.4rem;border-radius:999px;border:0;background:var(--herz);color:var(--nacht);cursor:pointer}
+.knopf:hover{background:#ffd06b}
+.plaetze{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem);margin-top:3rem}
+.platz{position:relative;aspect-ratio:3/4;border:3px dashed #9aa0b4;border-radius:var(--skizze);display:grid;place-items:center;text-align:center;padding:1.2rem;color:var(--grau);overflow:hidden;background:#fafbff}
+.platz img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.platz.hat-bild{border:0;border-radius:18px;padding:0}
+.platz .leer svg{width:64px;height:64px;margin:0 auto .8rem;opacity:.7}
+.platz .leer b{display:block;font-family:'Fredoka',sans-serif;font-weight:500;color:var(--tinte);font-size:1.1rem;margin-bottom:.3rem}
+.platz .leer small{font-size:.85rem}
+.plaetze figcaption{text-align:left}
+
+/* ---------- Schluss ---------- */
+.schluss{background:var(--nacht-tief);color:#fff;text-align:center;padding:clamp(5rem,10vw,8rem) 0}
+.schluss .gross{color:#fff;font-family:'Fredoka',sans-serif;font-size:clamp(2rem,5.5vw,4rem);font-weight:600;line-height:1.15;max-width:18ch;margin:0 auto 1.5rem}
+.schluss .gross span{display:block;color:var(--herz)}
+.schluss p{color:#a9b2d6;max-width:36rem;margin:0 auto .6rem;font-size:1rem}
+.schluss a{color:#fff}
+
+/* ---------- Lightbox ---------- */
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:92vh}
+dialog::backdrop{background:rgba(8,10,24,.88)}
+dialog img{max-height:86vh;width:auto;margin:auto;border-radius:12px}
+dialog p{color:#fff;text-align:center;font-size:.95rem;margin:.7rem 0 0}
+.schliessen{position:fixed;top:1rem;right:1rem;width:2.8rem;height:2.8rem;border-radius:50%;border:0;background:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+
+/* ---------- Mobil ---------- */
+@media (max-width:860px){
+  .hero-grid,.geschichte,.anatomie-grid,.blatt-reihe,.rezept-grid,.mission-grid,.kerzen-buehne{grid-template-columns:1fr}
+  .bullauge{width:min(100%,22rem);order:-1}
+  .zeitleiste{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .plaetze{grid-template-columns:1fr 1fr}
+  .plaetze figure:last-child{grid-column:1 / -1}
+  .plaetze figure:last-child .platz{aspect-ratio:4/3}
+}
+@media (max-width:520px){
+  .vergleich{grid-template-columns:1fr}
+  .zeitleiste{grid-template-columns:1fr}
+  .plaetze{grid-template-columns:1fr}
+  .versuch{grid-template-columns:5rem 1fr}
+  .marke{width:1.7rem;height:1.7rem;font-size:.85rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="sterne" aria-hidden="true" width="100%" height="100%">
+    <defs><pattern id="sternmuster" width="220" height="220" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="30" r="1.2" fill="#fff"/><circle cx="120" cy="18" r=".8" fill="#fff"/>
+      <circle cx="190" cy="80" r="1.4" fill="#cfe0ff"/><circle cx="60" cy="110" r=".7" fill="#fff"/>
+      <circle cx="160" cy="160" r="1" fill="#fff"/><circle cx="90" cy="200" r="1.3" fill="#ffe7b0"/>
+      <circle cx="10" cy="180" r=".8" fill="#fff"/>
+    </pattern></defs>
+    <rect width="100%" height="100%" fill="url(#sternmuster)"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <h1><span class="zeile">Mission</span><span class="zeile licht">Licht</span></h1>
+      <p class="unter">Ein Astronaut aus Gemüse für Alinas 34. Geburtstag</p>
+      <p class="lead">Ein Hokkaido als Helm, ein Blumenkohl als Körper, ein goldenes Licht im Herzen. Und im Kopf ein Gutschein für eine Nacht ohne Anzug.</p>
+      <span class="datum">19. Oktober 2026, Altenriet</span>
+    </div>
+    <div class="bullauge">
+      <img src="bilder/astronaut-fertig.jpg" alt="Der fertige Gemüse-Astronaut: Hokkaido-Helm mit blauem Visier, Blumenkohl-Körper mit leuchtendem rotem Herzfenster, Pastinaken-Arme und -Beine, Champignon-Hände und -Füße, daneben die ausgemalten Bilder" width="1200" height="1600">
+      <span class="glimmen" aria-hidden="true"></span>
+    </div>
+  </div>
+  <nav class="wrap hero-fuss" aria-label="Inhalt">
+    <a href="#geschichte">Die Geschichte</a>
+    <a href="#bau">Der Bau</a>
+    <a href="#ausmalbilder">Ausmalbilder</a>
+    <a href="#rezept">Goldene Lichtsuppe</a>
+    <a href="#mission">Die Mission</a>
+    <a href="#uebergabe">Die Übergabe</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="geschichte">
+  <div class="wrap geschichte">
+    <div class="text">
+      <h2>Wir sind Licht, mit Anzug</h2>
+      <p>Alina hat eine Kindergeschichte geschrieben. Darin sind wir alle Licht. Um auf der Erde leben zu können, bekommen wir einen Astronautenanzug. Dieser Anzug ist das Ego: alles, was wir in der Kindheit und danach lernen zu sein.</p>
+      <p>Aus dieser Geschichte wurde das Geschenk. Ein Astronaut, der auf der Erde steht und den Anzug noch trägt, durch den aber schon das Licht scheint. Gebaut aus genau dem Gemüse, das später in die Suppe wandert.</p>
+      <p class="zitat">Wir sind alle Astronauten auf der Erde. Besucher, die glauben, sie bräuchten einen Anzug, um hier zu überleben.</p>
+      <p>Dabei brauchen wir ihn nicht. Wir können ihn ausziehen, wie in der Sauna. Licht muss man nicht beschützen.</p>
+    </div>
+    <aside class="zwei-lichter" aria-label="Die zwei Lichter">
+      <div class="licht-karte">
+        <h3><span class="punkt blau" aria-hidden="true"></span>Kopf: blaues Licht</h3>
+        <p>Der Kopf trägt, was man sehen und erleben will. Dort steckt der Gutschein für die Saunanacht.</p>
+      </div>
+      <div class="licht-karte">
+        <h3><span class="punkt gold" aria-hidden="true"></span>Herz und Bauch: goldenes Licht</h3>
+        <p>Das Herz trägt das Licht. Hier landet später die Suppe, und das Rezept dazu hält der Astronaut in der Hand.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="anatomie" aria-labelledby="anatomie-titel">
+  <div class="wrap anatomie-grid">
+    <div class="markiert">
+      <img src="bilder/astronaut-fertig.jpg" alt="Der fertige Astronaut mit nummerierten Markierungen" loading="lazy" width="1200" height="1600">
+      <span class="marke" style="left:47%;top:22%">1</span>
+      <span class="marke" style="left:54%;top:40%">2</span>
+      <span class="marke" style="left:15%;top:43%">3</span>
+      <span class="marke" style="left:25%;top:60%">4</span>
+      <span class="marke" style="left:44%;top:55%">5</span>
+      <span class="marke" style="left:73%;top:78%">6</span>
+    </div>
+    <div>
+      <h2 id="anatomie-titel">Was woraus ist</h2>
+      <ol class="legende">
+        <li><span class="nr">1</span><div><strong>Helm aus Hokkaido</strong><span>Ausgehöhlt, das Visier mit blauem Seidenpapier hinterlegt. Innen wartet die Mission.</span></div></li>
+        <li><span class="nr">2</span><div><strong>Herz im Blumenkohl</strong><span>Ein Fenster in die Brust geschnitten, rotes Seidenpapier davor, eine Lichterkette dahinter.</span></div></li>
+        <li><span class="nr">3</span><div><strong>Arme und Hände</strong><span>Pastinaken mit Champignon-Handschuhen, Radieschen als Schulterpolster.</span></div></li>
+        <li><span class="nr">4</span><div><strong>Wanderstab</strong><span>Eine dicke Möhre. Man weiß ja nie, wie weit die Reise noch geht.</span></div></li>
+        <li><span class="nr">5</span><div><strong>Auf der Erde</strong><span>Pastinaken-Beine, Champignon-Stiefel, ein Brokkoli-Baum und eine Paprika auf dem Geburtstagsteller.</span></div></li>
+        <li><span class="nr">6</span><div><strong>Die Ausmalbilder</strong><span>Rezept und Weltkarte, selbst ausgemalt. Mehr dazu weiter unten.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="vision-titel">
+  <div class="wrap">
+    <div class="text">
+      <h2 id="vision-titel">Erst geträumt, dann gebaut</h2>
+      <p>Bevor das erste Messer den Kürbis berührte, gab es ein Bild. Die Idee wurde in Worte gefasst und mit einer Bild-KI in eine Vorlage verwandelt. Die lag beim Bauen auf dem Handy daneben.</p>
+    </div>
+    <div class="vergleich">
+      <figure>
+        <button class="zoom" type="button" data-gross="bilder/vision-nano-banana.jpg" data-text="Die Vision: ein KI-Bild als Bauvorlage">
+          <img src="bilder/vision-nano-banana.jpg" alt="KI-generiertes Bild: Gemüse-Astronaut auf einer gemalten Erde mit blauem Visier und goldenem Herzen" loading="lazy" width="1289" height="1600">
+        </button>
+        <figcaption><b>Die Vision</b>Mit Nano Banana entworfen: blaues Visier, goldenes Herz, Erde unter den Füßen.</figcaption>
+      </figure>
+      <figure>
+        <button class="zoom" type="button" data-gross="bilder/astronaut-fertig.jpg" data-text="Die Wirklichkeit: der fertige Astronaut">
+          <img src="bilder/astronaut-fertig.jpg" alt="Der echte, fertige Gemüse-Astronaut" loading="lazy" width="1200" height="1600">
+        </button>
+        <figcaption><b>Die Wirklichkeit</b>Größer, wackliger, echter. Und mit eigenem Wanderstab.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="bau" style="background:#fbfaf7" aria-labelledby="bau-titel">
+  <div class="wrap">
+    <div class="text">
+      <h2 id="bau-titel">Der Bau am Küchentisch</h2>
+      <p>Samstag eingekauft in Neckartenzlingen, gebaut am Küchentisch in Altenriet. Ohne Kleber, nur mit Spießen, Zahnstochern und Geduld, denn der ganze Anzug soll später in den Topf.</p>
+    </div>
+    <ol class="zeitleiste">
+      <li>
+        <button class="zoom" type="button" data-gross="bilder/bau-1-start.jpg" data-text="Der Start: Hokkaido, Blumenkohl, Pastinaken">
+          <img src="bilder/bau-1-start.jpg" alt="Hokkaido, Blumenkohl, Pastinaken und LED-Teelichter auf dem Küchentisch, daneben ein Handy mit der Bildvorlage" loading="lazy" width="1200" height="1600">
+        </button>
+        <div class="schritt">Die Zutaten</div>
+        <p>Hokkaido, Blumenkohl, Pastinaken, Möhre. Die Vorlage liegt auf dem Handy daneben.</p>
+      </li>
+      <li>
+        <button class="zoom" type="button" data-gross="bilder/bau-2-rohbau.jpg" data-text="Rohbau mit Lichterkette">
+          <img src="bilder/bau-2-rohbau.jpg" alt="Rohbau des Astronauten mit leuchtendem ausgehöhltem Kürbiskopf, einem langen Spieß und einem Alufolien-Paket als Rucksack" loading="lazy" width="1200" height="1600">
+        </button>
+        <div class="schritt">Der Rohbau</div>
+        <p>Beine stehen, der Kopf leuchtet. Der Rucksack aus Alufolie versteckt die Batterien der Lichterkette.</p>
+      </li>
+      <li>
+        <button class="zoom" type="button" data-gross="bilder/bau-3-licht.jpg" data-text="Das Herz leuchtet">
+          <img src="bilder/bau-3-licht.jpg" alt="Der Astronaut mit leuchtendem Herzen im Blumenkohl, im Vordergrund Hammer, Messer und Schaschlikspieße" loading="lazy" width="1200" height="1600">
+        </button>
+        <div class="schritt">Licht im Herzen</div>
+        <p>Das Fenster ist geschnitten, die Lichterkette sitzt. Das Herz leuchtet zum ersten Mal.</p>
+      </li>
+      <li>
+        <button class="zoom" type="button" data-gross="bilder/bau-4-details.jpg" data-text="Radieschen als Gelenke">
+          <img src="bilder/bau-4-details.jpg" alt="Radieschenscheiben werden als Gelenke an den Astronauten gesteckt" loading="lazy" width="1200" height="1600">
+        </button>
+        <div class="schritt">Die Details</div>
+        <p>Radieschenscheiben werden zu Gelenken und Knöpfen. Jetzt kommt der Anzug zusammen.</p>
+      </li>
+    </ol>
+    <p class="werkzeug">Werkzeug: ein Messer, viele Schaschlikspieße und, ja, ein Hammer.</p>
+  </div>
+</section>
+
+<section id="ausmalbilder" class="ausmalen" aria-labelledby="ausmal-titel">
+  <div class="wrap">
+    <div class="text">
+      <h2 id="ausmal-titel">Drei Bilder zum Ausmalen</h2>
+      <p>Zum Astronauten gehören drei Blätter: das Rezept für die Hand, die Weltkarte für die Erde und der Gutschein für den Kopf. Alle als Ausmalbilder, schwarz auf weiß, ausgemalt mit dem Malkoffer. Zum Ausdrucken einfach herunterladen und in Originalgröße drucken.</p>
+    </div>
+    <div class="blatt-reihe">
+      <figure>
+        <div class="blatt">
+          <button class="zoom" type="button" data-gross="bilder/rezept-ausmalbild.jpg" data-text="Rezeptblatt zum Ausmalen">
+            <img src="bilder/rezept-ausmalbild.jpg" alt="Ausmalbild: Gemüse-Astronaut auf der Erde, Banner und leere Felder für das Rezept, Gemüse als Rahmen" loading="lazy" width="765" height="1024">
+          </button>
+        </div>
+        <figcaption><b>Das Rezeptblatt</b>Leere Felder für Zutaten und Schritte, von Hand beschriftet.</figcaption>
+        <a class="lade" href="downloads/Goldene-Lichtsuppe-A4.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>PDF herunterladen (A4)</a>
+      </figure>
+      <div class="blatt-stapel">
+        <figure>
+          <div class="blatt">
+            <button class="zoom" type="button" data-gross="bilder/weltkarte-ausmalbild.jpg" data-text="Weltkarte ohne Grenzen zum Ausmalen">
+              <img src="bilder/weltkarte-ausmalbild.jpg" alt="Ausmalbild einer Weltkarte ohne Ländergrenzen, Kontinente voller Gemüse und Obst, Menschen und Lichtfiguren, abgelegte Astronautenanzüge" loading="lazy" width="1600" height="1073">
+            </button>
+          </div>
+          <figcaption><b>Die Welt ohne Grenzen</b>Eine wohlgenährte Erde: Jeder Kontinent voller Essen, das dort wächst. Hier und da steigen Menschen aus ihren Anzügen und sind Licht. Imagine.</figcaption>
+          <a class="lade" href="downloads/Weltkarte-Licht-A4-quer.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>PDF herunterladen (A4 quer)</a>
+        </figure>
+      </div>
+    </div>
+    <div class="versuch">
+      <img src="bilder/rezept-entwurf-1.jpg" alt="Erster Entwurf des Rezeptblatts mit vorgedruckten Linien" loading="lazy" width="1195" height="1600">
+      <p><b style="font-family:Fredoka,sans-serif">Gelernt beim ersten Entwurf:</b> Die Bild-KI hat die Schreiblinien nie in der richtigen Anzahl gezeichnet. Also flogen alle Linien raus. Freie Felder, freie Handschrift.</p>
+    </div>
+  </div>
+</section>
+
+<section id="rezept" class="rezept" aria-labelledby="rezept-titel">
+  <div class="wrap">
+    <div class="text">
+      <h2 id="rezept-titel">Goldene Lichtsuppe</h2>
+      <p>Für Herz und Bauch, aus einem echten Astronautenanzug. Das Kurkuma macht sie golden.</p>
+    </div>
+    <div class="rezept-grid">
+      <div>
+        <p class="portion">4 Portionen, etwa 35 Minuten</p>
+        <ul class="zutaten">
+          <li><em>Helm:</em> 1 Hokkaido, ca. 800 g, mit Schale</li>
+          <li><em>Körper:</em> ½ Blumenkohl</li>
+          <li><em>Arme und Beine:</em> 2 Pastinaken</li>
+          <li><em>Wanderstab:</em> 1–2 Möhren</li>
+          <li>1 Zwiebel, 2 Knoblauchzehen</li>
+          <li>1 daumengroßes Stück Ingwer</li>
+          <li>1 TL Kurkuma, das goldene Licht</li>
+          <li>1 l Gemüsebrühe</li>
+          <li>200 ml Kokosmilch</li>
+          <li>Salz, Pfeffer, Saft einer halben Zitrone</li>
+          <li><em>Handschuhe und Stiefel:</em> Champignons</li>
+          <li>Kürbiskerne zum Bestreuen</li>
+        </ul>
+      </div>
+      <div>
+        <ol class="schritte">
+          <li><p><b>Anzug ausziehen.</b> Alle Spieße und Zahnstocher entfernen, Druckstellen großzügig wegschneiden.</p></li>
+          <li><p>Zwiebel, Knoblauch und Ingwer in etwas Öl drei Minuten anschwitzen. Kurkuma kurz mitrösten.</p></li>
+          <li><p>Kürbis, Blumenkohl, Pastinaken und Möhren würfeln, mit der Brühe aufgießen und 20 bis 25 Minuten weich köcheln.</p></li>
+          <li><p>Kokosmilch dazugeben, fein pürieren, mit Salz, Pfeffer und Zitrone abschmecken.</p></li>
+          <li><p>Champignons in wenig Öl braun braten und mit den Kürbiskernen obenauf geben.</p></li>
+        </ol>
+        <p style="font-size:.95rem;color:var(--grau)">Tipp: Angeschnittener Kürbis und Pilze halten nicht lange. Spätestens zwei Tage nach dem Geburtstag kochen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mission" class="mission" aria-labelledby="mission-titel">
+  <svg class="sterne" aria-hidden="true" width="100%" height="100%"><rect width="100%" height="100%" fill="url(#sternmuster)"/></svg>
+  <div class="wrap mission-grid">
+    <div>
+      <h2 id="mission-titel">Die Mission im Kopf</h2>
+      <p>Hebt man den Helm ab, findet man eine Schriftrolle. Darauf eine Einladung, den Anzug einmal ganz auszuziehen: eine lange Saunanacht im Fildorado. Für Alina und Basti, die Skywalkers.</p>
+      <dl class="eckdaten">
+        <dt>Was</dt><dd>Saturday Night Sauna „Mystische Herbstnacht“</dd>
+        <dt>Wann</dt><dd>Samstag, 24. Oktober 2026, 19 bis 1 Uhr</dd>
+        <dt>Wo</dt><dd>Fildorado, Filderstadt</dd>
+        <dt>Wer</dt><dd>Alina und Basti</dd>
+        <dt>Und Aurora?</dt><dd>Verbringt den Abend bei Oma und Michael</dd>
+      </dl>
+      <p>Das Motto auf dem Gutschein: <i>Anzug ausziehen, nacklicht sein.</i></p>
+      <a class="lade" href="downloads/Gutschein-Fildorado-2x-auf-A4.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Gutschein als PDF (2 Stück auf A4)</a>
+    </div>
+    <figure>
+      <div class="gutschein">
+        <button class="zoom" type="button" data-gross="bilder/gutschein-ausmalbild.jpg" data-text="Der Gutschein zum Ausmalen">
+          <img src="bilder/gutschein-ausmalbild.jpg" alt="Gutschein zum Ausmalen: Astronautenschwitz und Fit, Mystische Herbstnacht im Fildorado, Samstag 24. Oktober 2026, für die Skywalkers. Der Astronaut sitzt ohne Helm auf der Saunabank neben einer Feuerschale." loading="lazy" width="1024" height="506">
+        </button>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section id="uebergabe" class="uebergabe" aria-labelledby="uebergabe-titel">
+  <div class="wrap">
+    <div class="text">
+      <h2 id="uebergabe-titel">Die Übergabe</h2>
+      <p>Licht gedimmt, beide Lichter an, daneben eine echte Kerze. Alina pustet sie aus. Probier es selbst.</p>
+    </div>
+
+    <div class="kerzen-buehne" id="buehne">
+      <div class="buehne-bild">
+        <svg class="mini-astro" viewBox="0 0 170 260" role="img" aria-label="Gezeichneter Astronaut mit leuchtendem Kopf und Herzen">
+          <defs>
+            <radialGradient id="goldglanz"><stop offset="0" stop-color="#f5b83d" stop-opacity=".9"/><stop offset=".45" stop-color="#f5b83d" stop-opacity=".35"/><stop offset="1" stop-color="#f5b83d" stop-opacity="0"/></radialGradient>
+            <radialGradient id="blauglanz"><stop offset="0" stop-color="#7fb2ff" stop-opacity=".8"/><stop offset="1" stop-color="#7fb2ff" stop-opacity="0"/></radialGradient>
+          </defs>
+          <g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M70 196 L66 236" /><path d="M100 196 L104 236"/>
+            <ellipse cx="62" cy="242" rx="16" ry="10" fill="#2a2a3a"/><ellipse cx="108" cy="242" rx="16" ry="10" fill="#2a2a3a"/>
+            <path d="M42 140 L18 112"/><path d="M128 140 L150 160"/>
+            <circle cx="14" cy="106" r="10" fill="#2a2a3a"/><circle cx="154" cy="164" r="10" fill="#2a2a3a"/>
+            <path d="M40 200 a26 26 0 0 1 2 -50 a28 28 0 0 1 30 -26 a30 30 0 0 1 28 0 a28 28 0 0 1 30 26 a26 26 0 0 1 2 50 Z" fill="#3a3a4c"/>
+            <path d="M85 50 C85 40 92 34 100 33"/>
+          </g>
+          <circle class="aura" cx="85" cy="170" r="62" fill="url(#goldglanz)"/>
+          <path class="herzlicht" d="M85 186 C64 172 66 152 77 152 C82 152 85 156 85 160 C85 156 88 152 93 152 C104 152 106 172 85 186 Z" fill="#f5b83d"/>
+          <circle cx="85" cy="84" r="44" fill="#e8642c" stroke="#fff" stroke-width="4"/>
+          <circle class="aura" cx="85" cy="88" r="40" fill="url(#blauglanz)"/>
+          <ellipse class="kopflicht" cx="85" cy="88" rx="26" ry="19" fill="#7fb2ff"/>
+        </svg>
+        <button class="kerze" id="kerze" type="button" aria-label="Kerze auspusten">
+          <svg viewBox="0 0 90 140" aria-hidden="true">
+            <g class="rauch"><path d="M45 40 C38 30 52 22 44 10" fill="none" stroke="#bbb" stroke-width="3" stroke-linecap="round"/></g>
+            <path class="flamme" d="M45 30 C36 44 34 54 45 60 C56 54 54 44 45 30 Z" fill="#ffcf5a"/>
+            <line x1="45" y1="58" x2="45" y2="68" stroke="#222" stroke-width="3"/>
+            <rect x="18" y="66" width="54" height="22" rx="4" fill="#f4f4f4"/>
+            <path d="M10 62 L14 132 Q45 140 76 132 L80 62" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-width="3"/>
+          </svg>
+        </button>
+      </div>
+      <div class="buehne-text">
+        <h3>Puste die Kerze aus</h3>
+        <p class="botschaft" aria-live="polite" id="botschaft"></p>
+        <button class="knopf" id="knopf" type="button">Kerze auspusten</button>
+      </div>
+    </div>
+
+    <div class="plaetze">
+      <figure>
+        <div class="platz">
+          <div class="leer">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M32 14 C26 24 25 30 32 34 C39 30 38 24 32 14 Z"/><rect x="20" y="38" width="24" height="14" rx="3"/></svg>
+            <b>Foto folgt</b><small>Kerze aus, das Herz leuchtet weiter</small>
+          </div>
+          <img src="bilder/uebergabe-1.jpg" alt="Alina pustet die Kerze aus, der Astronaut leuchtet weiter" loading="lazy" onerror="this.remove()" onload="this.parentNode.classList.add('hat-bild')">
+        </div>
+        <figcaption><b>Kerze aus</b>Das Licht im Herzen bleibt an.</figcaption>
+      </figure>
+      <figure>
+        <div class="platz">
+          <div class="leer">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="32" cy="28" r="16"/><ellipse cx="32" cy="30" rx="9" ry="6"/><path d="M22 50 h20 M26 56 h12"/></svg>
+            <b>Foto folgt</b><small>Helm ab, die Mission wird entdeckt</small>
+          </div>
+          <img src="bilder/uebergabe-2.jpg" alt="Alina hebt den Kürbishelm ab und findet die Schriftrolle mit dem Gutschein" loading="lazy" onerror="this.remove()" onload="this.parentNode.classList.add('hat-bild')">
+        </div>
+        <figcaption><b>Helm ab</b>Im Kopf wartet die Mission.</figcaption>
+      </figure>
+      <figure>
+        <div class="platz">
+          <div class="leer">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 34 h40 a20 20 0 0 1 -40 0 Z"/><path d="M26 26 c-3-4 3-6 0-10 M38 26 c-3-4 3-6 0-10"/></svg>
+            <b>Foto folgt</b><small>Alina mit Astronaut, oder schon mit Suppe</small>
+          </div>
+          <img src="bilder/uebergabe-3.jpg" alt="Alina mit dem Gemüse-Astronauten" loading="lazy" onerror="this.remove()" onload="this.parentNode.classList.add('hat-bild')">
+        </div>
+        <figcaption><b>Mission erfüllt</b>Und dann ab in den Topf.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="schluss">
+  <div class="wrap">
+    <p class="gross">Wir sind Licht.<span>Der Anzug darf in die Suppe.</span></p>
+    <p>Alles Liebe zum Geburtstag, Alina.</p>
+    <p>Gebaut mit Liebe in Altenriet. Bildvorlagen mit Nano Banana, geplant mit Claude. Mehr über Alinas Arbeit: <a href="https://www.dein-koerperkompass.de/" rel="noopener">KØRPERKOMPASS</a>.</p>
+  </div>
+</footer>
+
+<dialog id="gross" aria-label="Bild vergrößert">
+  <button class="schliessen" type="button" aria-label="Schließen">×</button>
+  <img src="" alt="">
+  <p></p>
+</dialog>
+
+<script>
+(function(){
+  // Lightbox
+  var d = document.getElementById('gross'), dImg = d.querySelector('img'), dTxt = d.querySelector('p');
+  document.querySelectorAll('.zoom').forEach(function(b){
+    b.addEventListener('click', function(){
+      dImg.src = b.dataset.gross; dImg.alt = b.dataset.text || ''; dTxt.textContent = b.dataset.text || '';
+      if (d.showModal) d.showModal();
+    });
+  });
+  d.querySelector('.schliessen').addEventListener('click', function(){ d.close(); });
+  d.addEventListener('click', function(e){ if (e.target === d) d.close(); });
+
+  // Kerze
+  var buehne = document.getElementById('buehne'), knopf = document.getElementById('knopf'),
+      kerze = document.getElementById('kerze'), botschaft = document.getElementById('botschaft');
+  function umschalten(){
+    var aus = buehne.classList.toggle('aus');
+    botschaft.textContent = aus ? 'Dein Licht kann man nicht auspusten.' : '';
+    knopf.textContent = aus ? 'Kerze wieder anzünden' : 'Kerze auspusten';
+    kerze.setAttribute('aria-label', aus ? 'Kerze wieder anzünden' : 'Kerze auspusten');
+  }
+  knopf.addEventListener('click', umschalten);
+  kerze.addEventListener('click', umschalten);
+})();
+</script>
+</body>
+</html>
